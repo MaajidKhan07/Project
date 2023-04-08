@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#"><img src="Logo.jpeg" alt="" width="50" /></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- Image Section -->
+    <main>
+      <div class="image-section">
+        <header class="intro">
+          <div class="intro-slideshow">
+            <img src="Animal1.jpg" />
+            <img src="Animal2.jpg" />
+            <img src="Animal3.jpg" />
+            <!-- <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1">
+                    <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1"> -->
+          </div>
+          <div class="intro-header">
+            <h1>Animal Rescue</h1>
+            <p>It's all about the Humanity</p>
+          </div>
+        </header>
+      </div>
+    </main>
+
+    <!-- 3rd Section -->
+    <section>
+      <div class="mid-section">
+        <div class="content">
+          <div class="left-section">
+            <div class="text">
+              <h3>
+                <br>
+                If you see animal in need, take picture and upload it here or
+                call animal care helpline
+              </h3>
+              <br><br>
+              <p>
+                Just as not reporting any crime against humans is a crime,
+                witnessing cruelty against animals and not reporting it is a
+                crime as well. We must be kind towards animals. Witnessing
+                cruelty against animals can be an upsetting experience, but one
+                must know how to handle the situation so as to prevent the
+                animal from future abuse. Provide immediate veterinary care to
+                the abused or take picture and upload it here we will
+                send rescue team.
+              </p>
+              <br><br>
+              <button>See The Rules</button>
+            </div>
+          </div>
+          <form action="form.php" method="post" id="myForm">
+            <fieldset>
+              <legend><h2>Capture Injured Animal</h2></legend>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" oninput="capitalizeFirstLetter()" required onchange="validateName()"/>
+              <br />
+              <label for="contact">Contact Number:</label>
+              <input type="tel" id="contact" name="contact" onchange="validateContact()" required value="+91 "  />
+              <br />
+
+              <label for="contact">Our Email:</label>
+              <input
+                type="tel"
+                id="ourcontact"
+                name="contact"
+                required
+                value="khanmaajid313@gmail.com"
+                readonly
+              />
+              <br />
+
+              <label for="contact">Your Email:</label>
+              <input
+              onchange="validateMail()"
+                type="text"
+                id="yourmail"
+                name="contact"
+                required
+                placeholder="Enter Your Email"
+              />
+              <br />
+
+              <label for="location">Location:</label>
+              <input
+                type="text"
+                id="location"
+                placeholder="Fetching location..."
+                disabled
+              />
+
+              <button type="button" onclick="getLocation()" id="getlocation_btn">
+                Get Location
+              </button>
+              <br />
+              <label for="picture">Injured Animal Picture:</label>
+              <input
+                onclick="validatePicture()"
+                type="file"
+                id="picture"
+                name="picture"
+                accept="image/*"
+                required
+              />
+              <br />
+              <input type="submit" value="Submit" id="form_submit_btn"/>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
